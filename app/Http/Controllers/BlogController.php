@@ -20,6 +20,10 @@ class BlogController extends Controller
         return view('user', $context);
     }
 
+    public function writepost() {
+        return view('writepost');
+    }
+    
     public function addblogpost(Request $request) {
         $user = auth()->user();
         $blogpost = new Blogpost();

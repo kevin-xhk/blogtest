@@ -24,6 +24,7 @@ Route::get('/dashboard', function () {
 //routes added after following prof's tutorial
 Route::get('/users', 'BlogController@users');
 Route::get('/user/{id}', 'BlogController@user');
+Route::get('/writepost', 'BlogController@writepost')->middleware(['auth']);
 Route::post('/addblogpost', 'BlogController@addblogpost')->middleware(['auth']);
 
 require __DIR__.'/auth.php';
